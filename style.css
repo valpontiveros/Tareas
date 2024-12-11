@@ -74,7 +74,7 @@ body{
     margin: 5px 0;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 .tareas i:hover{
     color: aquamarine;

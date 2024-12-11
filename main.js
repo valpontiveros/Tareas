@@ -48,17 +48,16 @@ function agregarTarea(tarea,id,hecho,eliminar) {
     const LINE = hecho ? tachado : '';
     const elemento = ` <li id="elemento">
     <i id="${id}" data="hecho" class="bi ${realizado}"></i>
-     <i class="bi bi-check-circle-fill"></i>
-    <p class="tarea-lista text ${LINE}">${tarea}</p> 
+    <p class="tarea-lista text${LINE}">${tarea}</p> 
     <i id="${id}" data = "eliminar" class="bi bi-trash3"></i>
 </li> `
 lista.insertAdjacentHTML("beforeend",elemento);
 };
 
 function tareaRealizada(element) {
-    element.classlist.toggle(check);
-    element.classlist.toggle(uncheck);
-    element.parentNode.querySelector('.text').classlist.toggle(tachado);
+    element.classList.toggle('bi-check-circle-fill');
+    element.classList.toggle('bi-check-circle');
+    element.parentNode.querySelector('.text').classList.toggle(tachado);
     LIST[element.id].realizado = LIST[element.id].realizado ?false : true;
 };
 
@@ -90,7 +89,7 @@ if (elementData == "hecho") {
 {
     tareaEliminada(element);
 };
-localStorage.selfItem("TODO", JSON.stringify(LIST));
+localStorage.setItem("TODO", JSON.stringify(LIST));
 })
 
 let data = localStorage.getItem ("TODO");
