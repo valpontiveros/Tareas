@@ -9,7 +9,7 @@
 }
 body{
     font-family: "Outfit", serif;
-    font-weight: 600;
+    font-weight: 400;
     font-style: normal;
     background-color: var(--bg-);
     height: 100vh;
@@ -32,7 +32,7 @@ body{
 .agregar{
     background-color: var(--color-secundario);
     border-radius: 8px;
-    height: 70px;
+    height: 45px;
     display: flex;
     align-items: center;
     padding: 10px;
@@ -49,10 +49,9 @@ body{
 #input::placeholder{
     font-size: 1.1rem;
     color: var(--color-text);
-
 }
 .agregar i{
-    font-size: 50px;
+    font-size: 40px;
     color: var(--color-text);
 }
 .agregar i:hover{
